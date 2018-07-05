@@ -1,0 +1,12 @@
+
+syntax = "proto3";
+
+package simplechat;
+
+service SimpleChat {
+    rpc Say(stream Msg) returns (stream Msg){}
+}
+
+message Msg {
+    string msg = 1;
+}
